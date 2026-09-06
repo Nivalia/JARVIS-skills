@@ -1,0 +1,13 @@
+{
+  "source": "skills-sh/DreambigOu/ELI5/skills/eli5",
+  "source_url": "https://github.com/DreambigOu/ELI5/tree/a766623b062331fdde53467001379b4ddf3acc2f/skills/eli5",
+  "bundle_hash": "sha256:37df8dc9c7feafd5174845d70e96a74845a22819e95e69c9b9ddd885ecae5006",
+  "scanner_version": "skills-guard-v2",
+  "verdict": "safe",
+  "trust_level": "community",
+  "findings": [],
+  "rules": [],
+  "scanned_at": "2026-09-06T04:24:04.461082+00:00",
+  "summary": "eli5: clean scan, no threats detected",
+  "fresh": true
+}

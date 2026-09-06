@@ -1,0 +1,580 @@
+{
+  "generated_at": "2026-08-06 02:02:31 +0800",
+  "platform": "linux",
+  "uname": "Linux 6.1.0-18-amd64",
+  "script": "skills/scripts/refresh-tool-index.sh",
+  "tools": [
+    {
+      "name": "java",
+      "skill": "core-runtime",
+      "purpose": "Java runtime for jadx/apktool/Burp/Ghidra",
+      "available": true,
+      "path": "/opt/jdk/jdk-21.0.12/bin/java",
+      "version": "java version \"21.0.12\" 2026-07-21 LTS",
+      "source": "command",
+      "install_hint": "apt: sudo apt install openjdk-17-jdk"
+    },
+    {
+      "name": "python3",
+      "skill": "core-runtime",
+      "purpose": "Python runtime for helper scripts and pipx tools",
+      "available": true,
+      "path": "/usr/bin/python3",
+      "version": "Python 3.11.2",
+      "source": "command",
+      "install_hint": "apt: sudo apt install python3 python3-venv python3-pip pipx"
+    },
+    {
+      "name": "pipx",
+      "skill": "core-runtime",
+      "purpose": "Isolated Python CLI installer",
+      "available": true,
+      "path": "/usr/bin/pipx",
+      "version": "1.1.0",
+      "source": "command",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "node",
+      "skill": "core-runtime",
+      "purpose": "Node.js runtime for MCP bridges",
+      "available": true,
+      "path": "/root/.nvm/versions/node/v24.18.1/bin/node",
+      "version": "v24.18.1",
+      "source": "command",
+      "install_hint": "apt/nvm: sudo apt install nodejs npm; prefer NodeSource or nvm for newer Node"
+    },
+    {
+      "name": "npm",
+      "skill": "core-runtime",
+      "purpose": "Node package manager",
+      "available": true,
+      "path": "/root/.nvm/versions/node/v24.18.1/bin/npm",
+      "version": "11.16.0",
+      "source": "command",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "npx",
+      "skill": "core-runtime",
+      "purpose": "Run npm MCP packages",
+      "available": true,
+      "path": "/root/.nvm/versions/node/v24.18.1/bin/npx",
+      "version": "11.16.0",
+      "source": "command",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "jadx",
+      "skill": "apk-reverse",
+      "purpose": "APK Java/Kotlin decompiler",
+      "available": true,
+      "path": "/usr/local/bin/jadx",
+      "version": "1.5.6",
+      "source": "command",
+      "install_hint": "GitHub release: download jadx ZIP to ~/tools/jadx"
+    },
+    {
+      "name": "apktool",
+      "skill": "apk-reverse",
+      "purpose": "APK decode and rebuild",
+      "available": true,
+      "path": "/usr/bin/apktool",
+      "version": "2.7.0-dirty",
+      "source": "command",
+      "install_hint": "apt or jar: sudo apt install apktool; or official apktool.jar"
+    },
+    {
+      "name": "adb",
+      "skill": "apk-reverse",
+      "purpose": "Android device bridge",
+      "available": true,
+      "path": "/usr/bin/adb",
+      "version": "Android Debug Bridge version 1.0.41",
+      "source": "command",
+      "install_hint": "apt or Android platform-tools: sudo apt install adb"
+    },
+    {
+      "name": "frida",
+      "skill": "reverse-engineering",
+      "purpose": "Dynamic instrumentation CLI",
+      "available": true,
+      "path": "/root/.local/bin/frida",
+      "version": "17.17.0",
+      "source": "command",
+      "install_hint": "pipx: pipx install frida-tools"
+    },
+    {
+      "name": "frida-ps",
+      "skill": "reverse-engineering",
+      "purpose": "Frida process listing",
+      "available": true,
+      "path": "/root/.local/bin/frida-ps",
+      "version": "17.17.0",
+      "source": "command",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "r2",
+      "skill": "radare2",
+      "purpose": "radare2 CLI analysis",
+      "available": true,
+      "path": "/usr/bin/r2",
+      "version": "radare2 6.1.8 +1 abi:110 @ linux-x86_64",
+      "source": "command",
+      "install_hint": "GitHub/source preferred; apt if available"
+    },
+    {
+      "name": "rabin2",
+      "skill": "radare2",
+      "purpose": "Binary metadata extraction",
+      "available": true,
+      "path": "/usr/bin/rabin2",
+      "version": "rabin2 6.1.8 +1 abi:110 @ linux-x86_64",
+      "source": "command",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "ghidra",
+      "skill": "reverse-engineering",
+      "purpose": "Ghidra reverse-engineering suite",
+      "available": true,
+      "path": "/usr/local/bin/ghidraRun",
+      "version": "Exited with error.  Run in foreground (fg) mode for more details.",
+      "source": "command",
+      "install_hint": "GitHub release ZIP or Flatpak; Java required"
+    },
+    {
+      "name": "idapro",
+      "skill": "ida-reverse",
+      "purpose": "IDA Pro commercial reverse-engineering suite",
+      "available": false,
+      "path": null,
+      "version": null,
+      "source": null,
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "burpsuite",
+      "skill": "burp-mcp",
+      "purpose": "BurpSuite desktop application",
+      "available": true,
+      "path": "/usr/local/bin/burpsuite",
+      "version": "2025.6-39511 Burp Suite Community Edition",
+      "source": "command",
+      "install_hint": "manual installer/jar; then load burp-mcp-full jar"
+    },
+    {
+      "name": "graphviz",
+      "skill": "diagram-generator",
+      "purpose": "Graphviz diagram rendering",
+      "available": true,
+      "path": "/usr/bin/dot",
+      "version": "dot - graphviz version 2.43.0 (0)",
+      "source": "command",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "plantuml",
+      "skill": "diagram-generator",
+      "purpose": "PlantUML diagram rendering",
+      "available": true,
+      "path": "/usr/bin/plantuml",
+      "version": "PlantUML version 1.2020.02 (Sun Mar 01 18:22:07 CST 2020)",
+      "source": "command",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "nmap",
+      "skill": "pentest-tools",
+      "purpose": "Network scanner",
+      "available": true,
+      "path": "/usr/bin/nmap",
+      "version": "Nmap version 7.93 ( https://nmap.org )",
+      "source": "command",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "sqlmap",
+      "skill": "pentest-tools",
+      "purpose": "SQL injection testing tool",
+      "available": true,
+      "path": "/usr/bin/sqlmap",
+      "version": "1.7.2#stable",
+      "source": "command",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "ffuf",
+      "skill": "pentest-tools",
+      "purpose": "Web fuzzer",
+      "available": true,
+      "path": "/usr/bin/ffuf",
+      "version": "ffuf version: 1.1.0",
+      "source": "command",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "hashcat",
+      "skill": "pentest-tools",
+      "purpose": "Password recovery",
+      "available": false,
+      "path": null,
+      "version": null,
+      "source": null,
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "nuclei",
+      "skill": "pentest-tools",
+      "purpose": "Template-based vulnerability scanner",
+      "available": false,
+      "path": null,
+      "version": null,
+      "source": null,
+      "install_hint": "GitHub release or go install; apt may be unavailable"
+    },
+    {
+      "name": "binwalk",
+      "skill": "firmware-pentest",
+      "purpose": "Firmware extraction and analysis",
+      "available": false,
+      "path": null,
+      "version": null,
+      "source": null,
+      "install_hint": "apt: sudo apt install binwalk"
+    },
+    {
+      "name": "seclists",
+      "skill": "pentest-tools",
+      "purpose": "Security wordlists",
+      "available": false,
+      "path": null,
+      "version": null,
+      "source": null,
+      "install_hint": "git clone https://github.com/danielmiessler/SecLists ~/tools/SecLists"
+    },
+    {
+      "name": "jshookmcp",
+      "skill": "js-reverse",
+      "purpose": "JS/CDP/Hook MCP runtime via npx",
+      "available": true,
+      "path": "/root/.nvm/versions/node/v24.18.1/bin/npx",
+      "version": "11.16.0",
+      "source": "command",
+      "install_hint": "npx: npx -y @jshookmcp/jshook@0.3.4"
+    },
+    {
+      "name": "reqable-mcp",
+      "skill": "pentest-tools",
+      "purpose": "Reqable desktop MCP runtime via npx",
+      "available": true,
+      "path": "/root/.nvm/versions/node/v24.18.1/bin/npx",
+      "version": "11.16.0",
+      "source": "command",
+      "install_hint": "npx: npx -y reqable-mcp-server@1.0.1; install Reqable desktop separately"
+    },
+    {
+      "name": "jeb-pro",
+      "skill": "apk-reverse",
+      "purpose": "Commercial Android/ARM decompiler (manual licensed install)",
+      "available": false,
+      "path": null,
+      "version": null,
+      "source": null,
+      "install_hint": "manual licensed install: https://www.pnfsoftware.com/jeb/"
+    },
+    {
+      "name": "anything-analyzer",
+      "skill": "browser-automation",
+      "purpose": "Browser/HTTP analyzer MCP project",
+      "available": false,
+      "path": null,
+      "version": null,
+      "source": null,
+      "install_hint": "git clone + pnpm install + pnpm dev"
+    },
+    {
+      "name": "burp-mcp-full",
+      "skill": "burp-mcp",
+      "purpose": "Local Burp MCP extension and stdio bridge",
+      "available": true,
+      "path": "/root/.hermes/skills/reverse-skill/burp-mcp-full/mcp-bridge.js",
+      "version": null,
+      "source": "path-probe",
+      "install_hint": "see PLATFORMS.md and docs/platforms/linux.md"
+    },
+    {
+      "name": "binwalk",
+      "skill": "firmware-pentest",
+      "purpose": "Firmware extraction and analysis",
+      "available": false,
+      "path": null,
+      "version": null,
+      "source": null,
+      "install_hint": "apt: sudo apt install binwalk"
+    },
+    {
+      "name": "yara",
+      "skill": "malware-analysis",
+      "purpose": "Malware rule matching engine",
+      "available": false,
+      "path": null,
+      "version": null,
+      "source": null,
+      "install_hint": "apt: sudo apt install yara"
+    },
+    {
+      "name": "pwntools",
+      "skill": "reverse-engineering",
+      "purpose": "CTF pwn exploit development framework",
+      "available": false,
+      "path": null,
+      "version": null,
+      "source": null,
+      "install_hint": "pipx: pipx install pwntools"
+    }
+  ],
+  "capabilities": [
+    {
+      "name": "jadx",
+      "tool_available": true,
+      "ready": true,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "github-release-zip"
+    },
+    {
+      "name": "apktool",
+      "tool_available": true,
+      "ready": true,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "github-release-jar-wrapper"
+    },
+    {
+      "name": "jeb-pro",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": false,
+      "bootstrap_kind": "manual"
+    },
+    {
+      "name": "frida",
+      "tool_available": true,
+      "ready": true,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "pip-package"
+    },
+    {
+      "name": "frida-ps",
+      "tool_available": true,
+      "ready": true,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "pip-package"
+    },
+    {
+      "name": "idalib-mcp",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "pip-package"
+    },
+    {
+      "name": "reqable-mcp",
+      "tool_available": true,
+      "ready": false,
+      "mcp_registered": false,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "npm-mcp"
+    },
+    {
+      "name": "jshookmcp",
+      "tool_available": true,
+      "ready": false,
+      "mcp_registered": false,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "npm-mcp"
+    },
+    {
+      "name": "anything-analyzer",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": false,
+      "service_online": false,
+      "mcp_http_verified": false,
+      "can_auto_install": true,
+      "bootstrap_kind": "local-http-mcp"
+    },
+    {
+      "name": "idapro",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": false,
+      "service_online": false,
+      "mcp_http_verified": false,
+      "can_auto_install": true,
+      "bootstrap_kind": "local-http-mcp"
+    },
+    {
+      "name": "r2",
+      "tool_available": true,
+      "ready": true,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "github-release-zip"
+    },
+    {
+      "name": "rabin2",
+      "tool_available": true,
+      "ready": true,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "github-release-zip"
+    },
+    {
+      "name": "adb",
+      "tool_available": true,
+      "ready": true,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "winget-package"
+    },
+    {
+      "name": "agent-browser",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "npm-global"
+    },
+    {
+      "name": "ghidra-mcp",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": false,
+      "service_online": false,
+      "mcp_http_verified": false,
+      "can_auto_install": true,
+      "bootstrap_kind": "github-release-zip"
+    },
+    {
+      "name": "seclists",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "git-clone"
+    },
+    {
+      "name": "proxycat",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "git-clone"
+    },
+    {
+      "name": "burpsuite-mcp",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": false,
+      "service_online": false,
+      "mcp_http_verified": false,
+      "can_auto_install": false,
+      "bootstrap_kind": "local-http-mcp"
+    },
+    {
+      "name": "nmap",
+      "tool_available": true,
+      "ready": true,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "winget-package"
+    },
+    {
+      "name": "pentestswarm",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": false,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "go-install"
+    },
+    {
+      "name": "binwalk",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "winget-package"
+    },
+    {
+      "name": "yara",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "winget-package"
+    },
+    {
+      "name": "pwntools",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "pip-package"
+    },
+    {
+      "name": "bkcrack",
+      "tool_available": false,
+      "ready": false,
+      "mcp_registered": null,
+      "service_online": null,
+      "mcp_http_verified": null,
+      "can_auto_install": true,
+      "bootstrap_kind": "github-release-zip"
+    }
+  ]
+}

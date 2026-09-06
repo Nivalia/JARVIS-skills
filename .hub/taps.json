@@ -1,0 +1,12 @@
+{
+  "taps": [
+    {
+      "repo": "DreambigOu/ELI5",
+      "path": "skills/"
+    },
+    {
+      "repo": "anthropics/claude-plugins-community",
+      "path": "skills/"
+    }
+  ]
+}

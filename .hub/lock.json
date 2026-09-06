@@ -1,0 +1,325 @@
+{
+  "version": 1,
+  "installed": {
+    "polymarket": {
+      "source": "official",
+      "identifier": "official/research/polymarket",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:9d3cf3fc5173e3ea",
+      "install_path": "research/polymarket",
+      "files": [
+        "SKILL.md",
+        "references/api-endpoints.md",
+        "scripts/polymarket.py"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-08-09T03:14:46.864040+00:00",
+      "updated_at": "2026-08-09T03:14:46.864040+00:00"
+    },
+    "ascii-art": {
+      "source": "official",
+      "identifier": "official/creative/ascii-art",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:29e23c2fdb90e5ab",
+      "install_path": "creative/ascii-art",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.177541+00:00",
+      "updated_at": "2026-09-02T09:27:52.177541+00:00"
+    },
+    "comfyui": {
+      "source": "official",
+      "identifier": "official/creative/comfyui",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:612d22cb79d98990",
+      "install_path": "creative/comfyui",
+      "files": [
+        "SKILL.md",
+        "references/official-cli.md",
+        "references/rest-api.md",
+        "references/template-integrity.md",
+        "references/workflow-format.md",
+        "scripts/_common.py",
+        "scripts/auto_fix_deps.py",
+        "scripts/check_deps.py",
+        "scripts/comfyui_setup.sh",
+        "scripts/extract_schema.py",
+        "scripts/fetch_logs.py",
+        "scripts/hardware_check.py",
+        "scripts/health_check.py",
+        "scripts/run_batch.py",
+        "scripts/run_workflow.py",
+        "scripts/ws_monitor.py",
+        "tests/README.md",
+        "tests/conftest.py",
+        "tests/pytest.ini",
+        "tests/test_check_deps.py",
+        "tests/test_cloud_integration.py",
+        "tests/test_common.py",
+        "tests/test_extract_schema.py",
+        "tests/test_run_workflow.py",
+        "workflows/README.md",
+        "workflows/animatediff_video.json",
+        "workflows/flux_dev_txt2img.json",
+        "workflows/sd15_txt2img.json",
+        "workflows/sdxl_img2img.json",
+        "workflows/sdxl_inpaint.json",
+        "workflows/sdxl_txt2img.json",
+        "workflows/upscale_4x.json",
+        "workflows/wan_video_t2v.json"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.228999+00:00",
+      "updated_at": "2026-09-02T09:27:52.228999+00:00"
+    },
+    "excalidraw": {
+      "source": "official",
+      "identifier": "official/creative/excalidraw",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:359112274e8262e0",
+      "install_path": "creative/excalidraw",
+      "files": [
+        "SKILL.md",
+        "references/colors.md",
+        "references/dark-mode.md",
+        "references/examples.md",
+        "scripts/upload.py"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.234106+00:00",
+      "updated_at": "2026-09-02T09:27:52.234106+00:00"
+    },
+    "pretext": {
+      "source": "official",
+      "identifier": "official/creative/pretext",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:9e2e8f6151b4be1b",
+      "install_path": "creative/pretext",
+      "files": [
+        "SKILL.md",
+        "references/patterns.md",
+        "templates/donut-orbit.html",
+        "templates/hello-orb-flow.html"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.241198+00:00",
+      "updated_at": "2026-09-02T09:27:52.241198+00:00"
+    },
+    "sketch": {
+      "source": "official",
+      "identifier": "official/creative/sketch",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:bea886ff483216bf",
+      "install_path": "creative/sketch",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.242562+00:00",
+      "updated_at": "2026-09-02T09:27:52.242562+00:00"
+    },
+    "touchdesigner-mcp": {
+      "source": "official",
+      "identifier": "official/creative/touchdesigner-mcp",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:0c6b0a3ffb64b73c",
+      "install_path": "creative/touchdesigner-mcp",
+      "files": [
+        "SKILL.md",
+        "references/3d-scene.md",
+        "references/animation.md",
+        "references/audio-reactive.md",
+        "references/dat-scripting.md",
+        "references/external-data.md",
+        "references/geometry-comp.md",
+        "references/glsl.md",
+        "references/layout-compositor.md",
+        "references/mcp-tools.md",
+        "references/midi-osc.md",
+        "references/network-patterns.md",
+        "references/operator-tips.md",
+        "references/operators.md",
+        "references/panel-ui.md",
+        "references/particles.md",
+        "references/pitfalls.md",
+        "references/postfx.md",
+        "references/projection-mapping.md",
+        "references/python-api.md",
+        "references/replicator.md",
+        "references/troubleshooting.md",
+        "scripts/setup.sh"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.259774+00:00",
+      "updated_at": "2026-09-02T09:27:52.259774+00:00"
+    },
+    "evaluating-llms-harness": {
+      "source": "official",
+      "identifier": "official/mlops/evaluation/evaluating-llms-harness",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:b518f45966286421",
+      "install_path": "mlops/evaluation/evaluating-llms-harness",
+      "files": [
+        "SKILL.md",
+        "references/api-evaluation.md",
+        "references/benchmark-guide.md",
+        "references/custom-tasks.md",
+        "references/distributed-eval.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.265513+00:00",
+      "updated_at": "2026-09-02T09:27:52.265513+00:00"
+    },
+    "weights-and-biases": {
+      "source": "official",
+      "identifier": "official/mlops/evaluation/weights-and-biases",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:4286e3db3985d52f",
+      "install_path": "mlops/evaluation/weights-and-biases",
+      "files": [
+        "SKILL.md",
+        "references/artifacts.md",
+        "references/integrations.md",
+        "references/sweeps.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.269429+00:00",
+      "updated_at": "2026-09-02T09:27:52.269429+00:00"
+    },
+    "llama-cpp": {
+      "source": "official",
+      "identifier": "official/mlops/inference/llama-cpp",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:43a4ec8fb07acce8",
+      "install_path": "mlops/inference/llama-cpp",
+      "files": [
+        "SKILL.md",
+        "references/advanced-usage.md",
+        "references/hub-discovery.md",
+        "references/optimization.md",
+        "references/quantization.md",
+        "references/server.md",
+        "references/troubleshooting.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.273719+00:00",
+      "updated_at": "2026-09-02T09:27:52.273719+00:00"
+    },
+    "serving-llms-vllm": {
+      "source": "official",
+      "identifier": "official/mlops/inference/serving-llms-vllm",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:688c281ab63bb0ea",
+      "install_path": "mlops/inference/serving-llms-vllm",
+      "files": [
+        "SKILL.md",
+        "references/optimization.md",
+        "references/quantization.md",
+        "references/server-deployment.md",
+        "references/troubleshooting.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.276628+00:00",
+      "updated_at": "2026-09-02T09:27:52.276628+00:00"
+    },
+    "huggingface-hub": {
+      "source": "official",
+      "identifier": "official/mlops/huggingface-hub",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:55fa8eb6c3b4be8c",
+      "install_path": "mlops/huggingface-hub",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.277659+00:00",
+      "updated_at": "2026-09-02T09:27:52.277659+00:00"
+    },
+    "openhue": {
+      "source": "official",
+      "identifier": "official/smart-home/openhue",
+      "trust_level": "builtin",
+      "scan_verdict": "backfilled",
+      "content_hash": "sha256:177f4de2ef06e4d9",
+      "install_path": "smart-home/openhue",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {
+        "backfilled_from": "optional-skills"
+      },
+      "installed_at": "2026-09-02T09:27:52.346471+00:00",
+      "updated_at": "2026-09-02T09:27:52.346471+00:00"
+    },
+    "eli5": {
+      "source": "skills.sh",
+      "identifier": "skills-sh/DreambigOu/ELI5/skills/eli5",
+      "trust_level": "community",
+      "scan_verdict": "safe",
+      "content_hash": "sha256:37df8dc9c7feafd5",
+      "install_path": "eli5",
+      "files": [
+        "SKILL.md"
+      ],
+      "metadata": {
+        "source_url": "https://github.com/DreambigOu/ELI5/tree/a766623b062331fdde53467001379b4ddf3acc2f/skills/eli5",
+        "source_revision": "a766623b062331fdde53467001379b4ddf3acc2f",
+        "detail_url": "https://skills.sh/DreambigOu/ELI5/skills/eli5",
+        "repo_url": "https://github.com/DreambigOu/ELI5"
+      },
+      "scan_provenance": {
+        "source": "skills-sh/DreambigOu/ELI5/skills/eli5",
+        "source_url": "https://github.com/DreambigOu/ELI5/tree/a766623b062331fdde53467001379b4ddf3acc2f/skills/eli5",
+        "bundle_hash": "sha256:37df8dc9c7feafd5174845d70e96a74845a22819e95e69c9b9ddd885ecae5006",
+        "scanner_version": "skills-guard-v2",
+        "verdict": "safe",
+        "trust_level": "community",
+        "findings": [],
+        "rules": [],
+        "scanned_at": "2026-09-06T04:24:04.461082+00:00",
+        "summary": "eli5: clean scan, no threats detected",
+        "fresh": true
+      },
+      "installed_at": "2026-09-06T04:24:04.477523+00:00",
+      "updated_at": "2026-09-06T04:24:04.477542+00:00"
+    }
+  }
+}

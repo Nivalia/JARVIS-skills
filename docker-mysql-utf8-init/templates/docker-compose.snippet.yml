@@ -1,0 +1,77 @@
+# Minimal docker-compose snippet that gets UTF-8 right for a MySQL
+# container with init SQL files containing non-ASCII strings.
+#
+# Three things matter:
+#   1. Mount my-charset.cnf into /etc/mysql/conf.d/ (overrides built-in defaults)
+#   2. Pass --skip-character-set-client-handshake (forces server charset)
+#   3. Mount a 00-set-charset.sql wrapper FIRST in initdb.d
+#
+# Without all three, you'll see Chinese strings garbled on first init.
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: app-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: change_me_in_prod
+      MYSQL_DATABASE: appdb
+      TZ: Asia/Shanghai
+      # Belt + suspenders: force locale and run an init command at startup
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      MYSQL_INIT_COMMAND: "SET NAMES utf8mb4; SET CHARACTER_SET_CLIENT=utf8mb4;"
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      # KEY FLAG: prevents mysql CLI from renegotiating to latin1 during init
+      - --skip-character-set-client-handshake
+      - --default-authentication-plugin=mysql_native_password
+      - --max_connections=500
+    ports:
+      - "3306:3306"
+    volumes:
+      # Data (host bind mount so we can wipe + re-init cleanly in dev)
+      - ./mysql-data:/var/lib/mysql
+
+      # Layer 1: cnf override
+      - ./mysql-conf/my-charset.cnf:/etc/mysql/conf.d/my-charset.cnf:ro
+
+      # Layer 3: wrapper SQL files, numbered for explicit init order
+      # The 00- file MUST be first; otherwise later SQL files execute
+      # with the wrong connection charset.
+      - ./sql/00-set-charset.sql:/docker-entrypoint-initdb.d/00-set-charset.sql:ro
+      - ./sql/01-schema.sql:/docker-entrypoint-initdb.d/10-schema.sql:ro
+      - ./sql/02-seed.sql:/docker-entrypoint-initdb.d/20-seed.sql:ro
+      - ./sql/03-dictionaries.sql:/docker-entrypoint-initdb.d/30-dictionaries.sql:ro
+
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-pchange_me_in_prod"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    driver: bridge
+
+# Companion files:
+
+# ./mysql-conf/my-charset.cnf
+# [mysqld]
+# character-set-server = utf8mb4
+# collation-server = utf8mb4_unicode_ci
+# init-connect = 'SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci'
+# [client]
+# default-character-set = utf8mb4
+# [mysql]
+# default-character-set = utf8mb4
+
+# ./sql/00-set-charset.sql
+# SET NAMES utf8mb4;
+# SET CHARACTER_SET_CLIENT = utf8mb4;
+# SET CHARACTER_SET_RESULTS = utf8mb4;
+# SET CHARACTER_SET_CONNECTION = utf8mb4;
+# SET collation_connection = utf8mb4_unicode_ci;
